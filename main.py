@@ -1,5 +1,4 @@
 
-import Tkinter as tk
 from gui import form_main
 
 
