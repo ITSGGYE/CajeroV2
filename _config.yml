@@ -1,2 +1,8 @@
 theme: jekyll-theme-hacker
 show_downloads: true
+navbar-links:
+  About Me: "Acerca"
+  Resources:
+    - Estudiantes: "http://"
+    - Instituto: "http://itsgg.edu.ec"
+    - GitHub Pages: "https://github.com/ITSGGYE/"
