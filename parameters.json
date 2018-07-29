@@ -64,7 +64,8 @@
     ],
     "general":[
         {
-            "db": "mysql"
+            "db": "mysql",
+            "fullscreen": false
         }
     ],
     "mysql":[

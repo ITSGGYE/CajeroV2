@@ -9,16 +9,20 @@ from database.conexion import PostgreSQL as psg_connect
 from utils.load_json import LoadJson
 import logging
 import os
+import tkMessageBox
 
 mainWindow = Tk()
 
+try:
+    fileJson = LoadJson().read('parameters.json')
+    options = fileJson['general']
+except Exception, e:
+    tkMessageBox.showerror('Error', 'No se pudo cargar el archivo json')
 
 class MainFrame:
 
     #Seleccionar Base de Datos desde archivo de parámetros
     def dbSelect(self):
-        fileJson = LoadJson().read('parameters.json')
-        options = fileJson['general']
 
         database = options[0]['db']
 
@@ -38,13 +42,16 @@ class MainFrame:
             None
 
     def __init__(self):
-        #self.dbSelect
+        fullscreen = options[0]['fullscreen']
+
+        if fullscreen == True:
+            mainWindow.attributes("-fullscreen", True)
+
         mainWindow.title("Cajero Automático")
         mainWindow.attributes("-topmost", True)
-        mainWindow.attributes("-fullscreen", True)
         mainWindow.wait_visibility(mainWindow)
         mainWindow.resizable(0, 0)
-        mainWindow.wm_attributes('-alpha', 0.8)
+        mainWindow.wm_attributes('-alpha', 0.7)
         # mainWindow.tk.call('wm', 'favicon', window._w, img)
     
         mainWidth = mainWindow.winfo_screenwidth()
