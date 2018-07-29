@@ -6,11 +6,9 @@ from gui import frame_main
 from gui import frame_menu
 from database.conexion import MySQL as mysql_connect
 from database.conexion import PostgreSQL as psg_connect
-import MySQLdb
 from utils.load_json import LoadJson
 import logging
 import os
-import tkMessageBox
 
 mainWindow = Tk()
 
@@ -51,7 +49,7 @@ class MainFrame:
     
         mainWidth = mainWindow.winfo_screenwidth()
         mainHeight = mainWindow.winfo_screenheight()
-    
+
         keyboard.add_hotkey('enter', lambda: self.showMenuFrame(mainWidth, mainHeight))
         keyboard.add_hotkey('esc', lambda: self.close())
         keyboard.add_hotkey('a', lambda: self.showMainFrame(mainWidth, mainHeight))

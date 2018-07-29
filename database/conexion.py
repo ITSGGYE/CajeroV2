@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import mysql.connector as mysql
-import psycopg2 as postgres
+#import psycopg2 as postgres
 from utils.load_json import LoadJson
 import logging
 import tkMessageBox
@@ -38,9 +38,9 @@ class PostgreSQL:
         db_port = options[0]['port']
         db_name = options[0]['db']
 
-        try:
+        '''try:
             conn = postgres.connect(host=db_host, database=db_name, port=db_port, user=db_user, password=db_password)
             return conn
         except Exception, e:
-            tkMessageBox.showerror('Error', e)
+            tkMessageBox.showerror('Error', e)'''
 
