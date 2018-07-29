@@ -22,7 +22,7 @@ class MenuForm(Frame):
         lblTitle2 = Label(mainWindow, text="Presione una opción y de click en 'ACEPTAR' para continuar.", font=(None, 25))
         lblTitle2.place(x=self.posElement(50, mainWidth), y=self.posElement(80, mainHeight), anchor="center")
 
-        fileJson = LoadJson().read('menu.json')
+        fileJson = LoadJson().read('parameters.json')
 
         options = fileJson['menu_option']
         buttonWidth = options[0]['width']

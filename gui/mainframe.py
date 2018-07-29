@@ -4,14 +4,43 @@ from Tkinter import Tk, Button
 import keyboard
 from gui import frame_main
 from gui import frame_menu
+from database.conexion import MySQL as mysql_connect
+from database.conexion import PostgreSQL as psg_connect
+import MySQLdb
+from utils.load_json import LoadJson
+import logging
 import os
+import tkMessageBox
 
 mainWindow = Tk()
 
 
 class MainFrame:
 
+    #Seleccionar Base de Datos desde archivo de parámetros
+    def dbSelect(self):
+        fileJson = LoadJson().read('parameters.json')
+        options = fileJson['general']
+
+        database = options[0]['db']
+
+        if database == 'mysql':
+            mysql = mysql_connect()
+
+            conn = mysql.connect()
+            cursor = conn.cursor()
+            cursor.execute("SELECT IdAlumno, AlumnoCedula, AlumnoApellidos, AlumnoNombres FROM alumnos LIMIT 10")
+            logging.warning(cursor.fetchall())
+            conn.close()
+
+        elif database == 'postgres':
+            postgres = psg_connect()
+            return postgres.connect()
+        else:
+            None
+
     def __init__(self):
+        #self.dbSelect
         mainWindow.title("Cajero Automático")
         mainWindow.attributes("-topmost", True)
         #mainWindow.attributes("-fullscreen", True)
@@ -31,6 +60,9 @@ class MainFrame:
 
         btnCerrar = Button(mainWindow, text="Cerrar", command=self.close)
         btnCerrar.place(x=self.posElement(0, mainWidth), y=self.posElement(0, mainHeight))
+
+        btnTest = Button(mainWindow, text="Test", command=self.dbSelect)
+        btnTest.place(x=self.posElement(0, mainWidth), y=self.posElement(5, mainHeight))
 
     
         mainWindow.mainloop()

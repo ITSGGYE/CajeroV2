@@ -59,11 +59,38 @@
     "menu_option":[
         {
             "width": 30,
-            "height": 3,
-            "width-pad": 12,
-            "height-pad": 10,
-            "button_color": "red",
-            "background_color": "blue"
+            "height": 3
+        }
+    ],
+    "general":[
+        {
+            "db": "mysql"
+        }
+    ],
+    "mysql":[
+        {
+            "db": "academico",
+            "host": "127.0.0.1",
+            "port": 3306,
+            "user": "root",
+            "pass": "itsg",
+            "ssh_user": "report",
+            "ssh_pass": "report.2007",
+            "ssh_host": "173.0.0.1",
+            "ssh_port": 56347
+        }
+    ],
+    "postgres":[
+        {
+            "db": "academico",
+            "host": "127.0.0.1",
+            "port": "5432",
+            "user": "postgres",
+            "pass": "postgres",
+            "ssh_user": "report",
+            "ssh_pass": "report.2007",
+            "ssh_host": "173.0.0.1",
+            "ssh_port": 56347
         }
     ]
 }

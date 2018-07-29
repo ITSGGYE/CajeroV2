@@ -5,10 +5,10 @@ import ConfigParser
 
 class Config:
 
-    def getConfig(self):
+    def getConfig(self, file, section):
         conf = ConfigParser.ConfigParser()
-        conf.read("config.ini")
-        array = eval(conf.get("documentos", "documentos"), {}, {})
+        conf.read(file)
+        array = eval(conf.get(section, "documentos"), {}, {})
         if array:
             return array
         else:
