@@ -41,7 +41,7 @@ class MainFrame:
         #self.dbSelect
         mainWindow.title("Cajero Automático")
         mainWindow.attributes("-topmost", True)
-        #mainWindow.attributes("-fullscreen", True)
+        mainWindow.attributes("-fullscreen", True)
         mainWindow.wait_visibility(mainWindow)
         mainWindow.resizable(0, 0)
         mainWindow.wm_attributes('-alpha', 0.8)
