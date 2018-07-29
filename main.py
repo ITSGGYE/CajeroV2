@@ -1,7 +1,16 @@
+# -*- coding: utf-8 -*-
 
-from gui import form_main
+from gui import mainframe
+import os
 
 
-class Main(object):
+class Main:
 
-    form_main.MainForm()
+    mainframe.MainFrame()
+
+
+
+
+
+
+
