@@ -65,6 +65,7 @@
     "general":[
         {
             "db": "mysql",
+            "db_ssh": false,
             "fullscreen": false
         }
     ],
@@ -78,7 +79,7 @@
             "ssh_user": "report",
             "ssh_pass": "report.2007",
             "ssh_host": "173.0.0.1",
-            "ssh_port": 56347
+            "ssh_port": 22342
         }
     ],
     "postgres":[
