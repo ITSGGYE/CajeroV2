@@ -1,11 +1,11 @@
-#Cajero Automático Ver.2
+<h1>Cajero Automático Ver.2</h1>
 
 La versión 2 del cajero automático, corre sobre un raspberry pi b2 y pasó de Java a Python 2.7.
 Se utiliza la librería TKinter muy ligera y dinámica para el aspecto gráfico.
 
 <br/>
 
-**Requisitos**
+**Requisitos:**
 
 Librería TKinter 8.6 para Ubuntu
 
@@ -17,13 +17,18 @@ Instalar el conector para MySQL
 
 Instalar el conector para PostgreSQL
 
-`sudo pip install psycopg/`
+`sudo pip install psycopg`
 
 Instalar el sensor de teclado
 
 `sudo pip install keyboard`
 
-Habilitar el acceso al GUI para este proyecto
+Instalar SSHtunnel
+
+`sudo apt install libffi-dev` --Requisito para Raspberry<br/>
+`sudo pip install sshtunnel`
+
+Habilitar el acceso a root al GUI para este proyecto
 
 `xhost +`
 
