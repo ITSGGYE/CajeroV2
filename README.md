@@ -28,6 +28,9 @@ Instalar SSHtunnel
 `sudo apt install libffi-dev` --Requisito para Raspberry<br/>
 `sudo pip install sshtunnel`
 
+Instalar Pdfkit
+
+
 Habilitar el acceso a root al GUI para este proyecto
 
 `xhost +`

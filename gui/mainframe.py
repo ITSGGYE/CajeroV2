@@ -4,8 +4,8 @@ from Tkinter import Tk, Button
 import keyboard
 from gui import frame_main
 from gui import frame_menu
-from database.conexion import MySQL as mysql_connect
-from database.conexion import PostgreSQL as psg_connect
+#from database.conexion import MySQL as mysql_connect
+#from database.conexion import PostgreSQL as psg_connect
 from utils.load_json import LoadJson
 import logging
 import os
@@ -19,10 +19,11 @@ try:
 except Exception, e:
     tkMessageBox.showerror('Error', 'No se pudo cargar el archivo json')
 
+
 class MainFrame:
 
     #Seleccionar Base de Datos desde archivo de parámetros
-    def dbSelect(self):
+    '''def dbSelect(self):
 
         database = options[0]['db']
 
@@ -39,7 +40,7 @@ class MainFrame:
             postgres = psg_connect()
             return postgres.connect()
         else:
-            None
+            None'''
 
     def __init__(self):
         fullscreen = options[0]['fullscreen']
@@ -66,8 +67,8 @@ class MainFrame:
         btnCerrar = Button(mainWindow, text="Cerrar", command=self.close)
         btnCerrar.place(x=self.posElement(0, mainWidth), y=self.posElement(0, mainHeight))
 
-        btnTest = Button(mainWindow, text="Test", command=self.dbSelect)
-        btnTest.place(x=self.posElement(0, mainWidth), y=self.posElement(5, mainHeight))
+        #btnTest = Button(mainWindow, text="Test", command=self.dbSelect)
+        #btnTest.place(x=self.posElement(0, mainWidth), y=self.posElement(5, mainHeight))
 
     
         mainWindow.mainloop()

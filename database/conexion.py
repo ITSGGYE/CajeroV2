@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import mysql.connector as mysql
+#import mysql.connector as mysql
 #import psycopg2 as postgres
 from utils.load_json import LoadJson
 import logging

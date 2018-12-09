@@ -1,72 +1,11 @@
 {
-    "menu": [
-        {
-            "name": "1.- Certificado de Matrícula",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 1
-        },
-        {
-            "name": "2.- Certificado de Notas",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 2
-        },
-        {
-            "name": "3.- Certificado de Arrastre",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 3
-        },
-        {
-            "name": "4.- Certificado de Activo",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 4
-        },
-        {
-            "name": "5.- Certificado de Asistencia",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 5
-        },
-        {
-            "name": "6.- Certificado No Deuda",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 6
-        },
-        {
-            "name": "7.- Certificado de Activo",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 7
-        },
-        {
-            "name": "8.- Certificado de Aprobación",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 8
-        },
-        {
-            "name": "9.- Certificado No Deuda",
-            "path": "root/",
-            "sql": "select * from ",
-            "code": 9
-        }
 
-    ],
-    "menu_option":[
-        {
-            "width": 30,
-            "height": 3
-        }
-    ],
     "general":[
         {
             "db": "mysql",
             "db_ssh": false,
-            "fullscreen": false
+            "fullscreen": false,
+            "printer": "L396"
         }
     ],
     "mysql":[
