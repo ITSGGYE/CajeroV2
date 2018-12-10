@@ -29,6 +29,7 @@ Instalar SSHtunnel
 `sudo pip install sshtunnel`
 
 Instalar Pdfkit
+`sudo apt install python-pdfkit`
 
 
 Habilitar el acceso a root al GUI para este proyecto
